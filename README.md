@@ -16,6 +16,8 @@ SANCTUM_STATEFUL_DOMAINS=localhost
 перед запросами в postman (standalone)
 настройка pre-request script
 
+(test.onboarding.local - заменить на ваш домен)
+
 pm.sendRequest({
     url: 'http://test.onboarding.local/sanctum/csrf-cookie',
     method: 'GET'
@@ -31,3 +33,9 @@ X-XSRF-TOKEN
 {{xsrf-token}}
 
 он сам подставит токен
+
+5. Основные роуты
+
+/login
+/api/task/{taskId}
+/api/transfer/{userId}
